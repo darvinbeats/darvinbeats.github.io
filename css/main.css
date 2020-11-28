@@ -1,0 +1,36 @@
+/*! Darvin Beats Style */
+body {
+    margin: auto;
+}
+
+
+/*! Header */
+header {
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-top: 50px;
+    color: aliceblue;
+}
+header .headlogo {
+    background: url("/images/darvinbeatslogorend.png");
+    height: 100px;
+    width: 100px;
+}
+header h1 {
+    font-size: 40px;
+}
+header strong {
+    color: aliceblue;
+}
+header .headertext {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
