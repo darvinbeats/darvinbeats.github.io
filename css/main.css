@@ -34,3 +34,7 @@ header .headertext {
     justify-content: center;
     flex-direction: column;
 }
+.discount {
+    text-decoration: line-through;
+    font-style: italic;
+}
