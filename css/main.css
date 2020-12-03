@@ -1,6 +1,9 @@
 /*! Darvin Beats Style */
 body {
     margin: auto;
+    background: #403a3e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #403a3e, #be5869); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #403a3e, #be5869); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 @font-face {
     font-family: 'Material Icons';
@@ -14,20 +17,46 @@ body {
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
   }
 
+.dbmenu {
+    background: ghostwhite;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.dbmenu .menu-items {
+    display: flex;
+    text-align: center;
+}
+.dbmenu .menu-items li {
+    margin-right: 10px;
+    padding: 10px;
+}
+.dbmenu .menu-items li a {
+    color: rgb(41, 41, 41);
+    font-size: 13px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.dbmenu .menu-items li:hover, li:active {
+    background: #ececec;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
 /*! Header */
 header {
-    background: #8E2DE2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     height: auto;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin-bottom: 25px;
     text-align: center;
-    padding-top: 50px;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 header .headlogo {
-    background: url("/images/darvinbeatslogorend.png");
     height: 100px;
     width: 100px;
 }
@@ -53,4 +82,71 @@ header .headertext {
 }
 .shopcart:before {
     content: "";
+}
+.licensebox {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    z-index: 50;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.licensebox .licensetop {
+    background-color: #424242;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 46px 20px;
+    display: block;
+    font-size: 13px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.licensebox .licenseprice{
+    font-size: 42px!important;
+    margin-bottom: 2px;
+    color: #fff;
+}
+.licensebox .bottom {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: block;
+    font-size: 13px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.licensebox .bottom p{
+    margin-bottom: 10px;
+}
+.licensebox .bottom .material-icons{
+    font-size: 15px;
+}
+#licensing-info, #subscriptions-info {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    padding: 95px 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.footerflow {
+    color: rgb(255, 255, 255);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.footerflow strong{
+    color: rgb(255, 255, 255);
+
 }
