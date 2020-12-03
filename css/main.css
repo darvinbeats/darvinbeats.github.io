@@ -1,9 +1,10 @@
 /*! Darvin Beats Style */
 body {
     margin: auto;
-    background: #403a3e; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #403a3e, #be5869); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #403a3e, #be5869); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 @font-face {
     font-family: 'Material Icons';
@@ -64,7 +65,7 @@ header h1 {
     font-size: 40px;
 }
 header strong {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 header .headertext {
     display: flex;
@@ -88,7 +89,6 @@ header .headertext {
     height: auto;
     min-height: auto;
     display: inline-block;
-    background-color: #fff;
     color: #333;
     z-index: 50;
     position: relative;
@@ -97,7 +97,7 @@ header .headertext {
     box-sizing: border-box;
 }
 .licensebox .licensetop {
-    background-color: #424242;
+    background-color: #303030;
     color: #fff;
     width: 100%;
     height: auto;
@@ -107,13 +107,19 @@ header .headertext {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
-.licensebox .licenseprice{
+.licensebox .text-detail {
+    font-weight: bold;
+}
+.licensebox .licenseprice {
     font-size: 42px!important;
     margin-bottom: 2px;
     color: #fff;
 }
 .licensebox .bottom {
+    background-color: #fff;
     width: 100%;
     height: auto;
     padding: 30px 20px;
@@ -123,10 +129,10 @@ header .headertext {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.licensebox .bottom p{
+.licensebox .bottom p {
     margin-bottom: 10px;
 }
-.licensebox .bottom .material-icons{
+.licensebox .bottom .material-icons {
     font-size: 15px;
 }
 #licensing-info, #subscriptions-info {
@@ -141,12 +147,20 @@ header .headertext {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.noselect {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .footerflow {
     color: rgb(255, 255, 255);
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.footerflow strong{
+.footerflow strong {
     color: rgb(255, 255, 255);
-
 }
