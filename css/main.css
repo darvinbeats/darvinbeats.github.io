@@ -24,7 +24,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     padding: 10px;
 }
 .dbmenu .menu-items {
@@ -167,6 +167,21 @@ header .headertext {
 }
 .message-body p {
     margin-bottom: 15px;
+}
+.products_box {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 23px;
+}
+.products_box .payboton {
+    margin-top: 15px;
+}
+.products_cart {
+    height: 40px;
+    width: 50px;
+    align-items: right;
 }
 .footerflow {
     color: rgb(255, 255, 255);
