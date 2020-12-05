@@ -24,7 +24,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: right;
+    align-items: center;
     padding: 10px;
 }
 .dbmenu .menu-items {
