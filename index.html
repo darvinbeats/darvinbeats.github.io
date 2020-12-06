@@ -46,7 +46,8 @@
       <nav class="dbmenu">
         <ul class="menu-items">
           <li><a href="https://www.youtube.com/channel/UC7Fl-TN1t-wFO6jXIu4SZOA/videos" target="_blank">Beats</a></li>
-          <li><a href="#">Librerías</a></li>
+          <li><a href="">Librerías</a></li>
+          <li><a href="#payment">Enviar Pago</a></li>
         </ul>
       </nav>
       <header>
@@ -54,13 +55,13 @@
           <div class="headlogo">
             <img src="images/darvinbeatslogosc.svg" alt="">
           </div>
-          <h1>Darvin Beats | Beat Store</h1>
-          <p>¿Deseas comprar un instrumental? Aprovecha el <strong>descuento</strong> del <em>30%</em> durante todo el mes de <code>diciembre</code>.</p>
-          <p> <code>(Ya está aplicado el descuento en todas las licencias)</code></p>
+          <h1>Darvin Beats</h1>
+          <p>¿Deseas comprar un instrumental? Aprovecha el <strong>descuento</strong> del <em>30%</em> <code>hasta el 12 de diciembre.</code></p>
+          <p><code>(Ya está aplicado el descuento en todas las licencias)</code></p>
         </div>
       </header>
         <div class="container is-max-desktop">
-            <div class="columns">
+            <div class="price_columns">
               <div class="column">
                 <div class="licensebox noselect">
                   <div class="has-text-centered licensetop">
@@ -100,7 +101,7 @@
                 <div class="licensebox noselect">
                   <div class="has-text-centered licensetop">
                     <p>PRO License</p>
-                    <strong class="licenseprice">$55,99</strong>
+                    <strong class="licenseprice">$69,99</strong>
                     <p>USO COMERCIAL</p>  
                   </div>
                   <div class="bottom">
@@ -133,37 +134,111 @@
                 </div>
               </div>
             </div>
-            <div class="block">
-            <article class="message mt-5">
-              <div class="message-header">
-                <p>¿Cómo adquiero una licencia?</p>
-              </div>
-              <div class="message-body" style="text-align: center;">
-                <p>1) Enviar el link del beat (como aparece en YouTube) y tu e-mail a través del chat de esta página.</p>
-                <p>2) Esperar unos minutos para verificar la disponibilidad del beat.</p>
-                <p>3) Continuar con la compra 💯. (Click en el botón de realizar pago) </p>
-                <p>4) Enviar la captura del pago realizado y esperar unos minutos para recibir los archivos en tu correo 💯.</p>
-                <p><strong>¡Gracias por su preferencia!</strong></p>
-                <div class="products_box">
-                  <div style="margin:0 auto; width: 200px; text-align: center;">
-                    <form id="payform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                      <input type="hidden" name="cmd" value="_s-xclick">
-                      <input type="hidden" name="hosted_button_id" value="N55ZT37YJJV8E">
-                      <input class="priceopcions" type="hidden" name="on0" value="Licenses">Licencias</td></tr><select name="os0">
-                        <option value="MP3 Lease">MP3 Lease $14,99 USD</option>
-                        <option value="WAV Lease">WAV Lease $29,99 USD</option>
-                        <option value="PRO License">PRO License $55,99 USD</option>
-                      <input type="hidden" name="currency_code" value="USD">
-                      <a href="javascript:;" onclick="document.getElementById('payform').submit()"  class="button is-primary is-rounded payboton"><i class="material-icons">shopping_cart</i></span> Realizar Pago</a>
-                      </div>
-                      </form>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          </div>
-        </div>
+           <div id="payment" class="payment_box">
+              <div class="payment_title">Realizar Pago</div>
+                  <div class="payment_content">
+                    <p><strong>1)</strong> Enviar el link del beat (como aparece en YouTube) y tu e-mail, mediante el chat de esta página.</p>
+                    <p><strong>2)</strong> Esperar unos minutos para verificar la disponibilidad del beat.</p>
+                    <p><strong>3)</strong> Continuar con la compra.</p>
+                    <p>💯💯</p>
+                      <div style="margin:0 auto; width: 200px; text-align: center;">
+                        <div id="smart-button-container">
+                          <div style="text-align: center; margin-top: 20px;">
+                            <div style="margin-bottom: 1.25rem;">
+                              <select id="item-options" style="padding: 10px;"><option value="MP3 Lease" price="14,99">MP3 Lease - $14,99 USD</option><option value="WAV Lease" price="29,99">WAV Lease - $29,99 USD</option><option value="Unlimited" price="69,99">Unlimited - $69,99 USD</option></select>
+                              <select style="visibility: hidden; width: 0px;" id="quantitySelect"></select>
+                            </div>
+                          <div id="paypal-button-container"></div>
+                          </div>
+                        </div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+                        <script>
+                          function initPayPalButton() {
+                            var shipping = 0;
+                            var itemOptions = document.querySelector("#smart-button-container #item-options");
+                        var quantity = parseInt();
+                        var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+                        if (!isNaN(quantity)) {
+                          quantitySelect.style.visibility = "visible";
+                        }
+                        var orderDescription = '';
+                        if(orderDescription === '') {
+                          orderDescription = 'Item';
+                        }
+                        paypal.Buttons({
+                          style: {
+                            shape: 'rect',
+                            color: 'gold',
+                            layout: 'vertical',
+                            label: 'paypal',
+                            
+                          },
+                          createOrder: function(data, actions) {
+                            var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+                            var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+                            var tax = (0 === 0) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+                            if(quantitySelect.options.length > 0) {
+                              quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+                            } else {
+                              quantity = 1;
+                            }
+                    
+                            tax *= quantity;
+                            tax = Math.round(tax * 100) / 100;
+                            var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+                            priceTotal = Math.round(priceTotal * 100) / 100;
+                            var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+                    
+                            return actions.order.create({
+                              purchase_units: [{
+                                description: orderDescription,
+                                amount: {
+                                  currency_code: 'USD',
+                                  value: priceTotal,
+                                  breakdown: {
+                                    item_total: {
+                                      currency_code: 'USD',
+                                      value: itemTotalValue,
+                                    },
+                                    shipping: {
+                                      currency_code: 'USD',
+                                      value: shipping,
+                                    },
+                                    tax_total: {
+                                      currency_code: 'USD',
+                                      value: tax,
+                                    }
+                                  }
+                                },
+                                items: [{
+                                  name: selectedItemDescription,
+                                  unit_amount: {
+                                    currency_code: 'USD',
+                                    value: selectedItemPrice,
+                                  },
+                                  quantity: quantity
+                                }]
+                              }]
+                            });
+                          },
+                          onApprove: function(data, actions) {
+                            return actions.order.capture().then(function(details) {
+                              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                            });
+                          },
+                          onError: function(err) {
+                            console.log(err);
+                          },
+                        }).render('#paypal-button-container');
+                      }
+                      initPayPalButton();
+                        </script>
+                    </div>
+                    <p><strong>¡Gracias por su preferencia!</strong></p>
+                  </div>
+                  </article>
+            </div>
+      </div>     
       <footer class="footerflow">
         <div class="block has-text-centered">
           <p><strong>Darvin Beats 2021</strong> by <a href="#">Darvin</a>. All rights reserved.</p>
