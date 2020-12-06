@@ -175,6 +175,7 @@ header .headertext {
 }
 .payment_box {
     width: auto;
+    padding: .75rem;
 }
 .payment_box .payment_title {
     padding: 10px;
