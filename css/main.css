@@ -1,7 +1,7 @@
 /*! Darvin Beats Style */
 body {
     margin: auto;
-    background: linear-gradient(0deg, rgb(170, 240, 203), rgb(57, 224, 155));
+    background-color: indigo;
 }
 @font-face {
     font-family: 'Material Icons';
@@ -118,7 +118,7 @@ header .headertext {
 .licensebox .text-detail {
     font-weight: bold;
     font-size: 12px;
-    color: #fff56d
+    color: #b4ff6d
 }
 .licensebox .licenseprice {
     font-size: 42px!important;
@@ -209,7 +209,7 @@ header .headertext {
     padding-bottom: 40px;
 }
 footer a {
-    color: rgb(53, 53, 53);
+    color: rgb(255, 215, 38);
     font-weight: bold;
 }
 footer a:hover {
