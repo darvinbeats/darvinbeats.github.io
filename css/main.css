@@ -1,7 +1,7 @@
 /*! Darvin Beats Style */
 body {
     margin: auto;
-    background: #5200af;  /* fallback for old browsers */
+    background: linear-gradient(0deg, rgb(170, 240, 203), rgb(57, 224, 155));
 }
 @font-face {
     font-family: 'Material Icons';
@@ -209,10 +209,11 @@ header .headertext {
     padding-bottom: 40px;
 }
 footer a {
-    color: rgb(255, 153, 0);
+    color: rgb(53, 53, 53);
+    font-weight: bold;
 }
 footer a:hover {
-    color:  rgb(219, 132, 0);
+    color:  rgb(255, 255, 255);
 }
 .footerflow strong {
     color: rgb(255, 255, 255);
