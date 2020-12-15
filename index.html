@@ -136,27 +136,26 @@
               </div>
             </div>
            <div id="purchase" class="payment_box">
-              <div class="payment_title">Comprar Instrumental</div>
+              <div class="payment_title">COMPRAR LICENCIAS</div>
                   <div class="payment_content">
-                    <p><strong>1)</strong> Enviar el link del beat (como aparece en YouTube) y tu e-mail, mediante el chat de esta página.</p>
+                    <p><strong>1)</strong> Enviar el link del beat (YouTube) mediante el chat de esta página.</p>
                     <p><strong>2)</strong> Esperar unos minutos para verificar la disponibilidad del beat.</p>
                     <p><strong>3)</strong> Continuar con la compra.</p>
                     <p>💯💯</p>
-                      <div style="margin:0 auto; width: 200px; text-align: center;">
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                      <div style="margin:0 auto; text-align: center;">
+                        <form id="payform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                           <input type="hidden" name="cmd" value="_s-xclick">
                           <input type="hidden" name="hosted_button_id" value="QPTCGWHEZ5PH4">
-                          <table>
-                          <p><input type="hidden" name="on0" value="Licenses">Licenses</p>
-                            <select class="" name="os0" style="padding: 5px; margin-bottom: 15px; margin-top: 5px;">
+                          
+                          <p><input type="hidden" name="on0" value="Licenses"><strong>Elige el tipo de licencia</strong></p>
+                            <select class="listbox" name="os0" style="padding: 5px; margin-bottom: 15px; margin-top: 5px;">
                             <option value="MP3 Lease">MP3 Lease</option>
                             <option value="WAV Lease">WAV Lease</option>
                             <option value="PRO License">PRO License</option>
-                          </select> </td></tr>
-                          </table>
+                          </select> 
+            
                           <input type="hidden" style="width: 0px; height: 0px;" name="currency_code" value="USD">
-                          <input class="payboton" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                          <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                          <div style="margin: 0 auto;"><a class="paybutton" onclick="document.getElementById('payform').submit(); return false;" name="submit" alt="PayPal - The safer, easier way to pay online!"><i class="material-icons cart-icon dispblock"></i><span>Comprar</span></a></div>
                           </form>                               
                       </div>
                       <p><strong>¡Gracias por su preferencia!</strong></p>

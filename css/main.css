@@ -205,7 +205,31 @@ header .headertext {
     border-bottom-right-radius: 4px;
 }
 .payment_content .listbox {
-    padding: 5px;
+    padding: 13px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+.payment_content .paybutton {
+    display:inline-flex;
+    align-items: center;
+    background-color: black;
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    padding: 0 16px;
+    min-height: auto!important;
+    min-width: auto!important;
+    text-shadow: none;
+    font-weight: 600!important;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.payment_content a {
+    color: #fff;
+}
+.dispblock {
+    display: block;
 }
 .footerflow {
     color: rgb(255, 255, 255);
