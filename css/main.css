@@ -1,7 +1,11 @@
 /*! Darvin Beats Style */
 body {
     margin: auto;
-    background-color: indigo;
+    background: #000000;  /* fallback for old browsers */
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #000a92);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4d1e09, #fa652b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 @font-face {
     font-family: 'Material Icons';
@@ -14,7 +18,7 @@ body {
       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
   }
-
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
 .dbmenu {
     background: ghostwhite;
     height: 50px;
@@ -46,7 +50,6 @@ body {
 }
 /*! Header */
 header {
- 
     height: auto;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -55,14 +58,15 @@ header {
     color: rgb(255, 255, 255);
 }
 header .headlogo {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 header h1 {
-    font-size: 43px !important;
+    font-size: 35px !important;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 header strong {
     color: rgb(255, 255, 255);
@@ -116,6 +120,7 @@ header .headertext {
     border-top-right-radius: 4px;
 }
 .licensebox .text-detail {
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 12px;
     color: #b4ff6d
@@ -124,6 +129,7 @@ header .headertext {
     font-size: 42px!important;
     margin-bottom: 2px;
     color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 .licensebox .licensenote {
     display: block;
@@ -161,6 +167,9 @@ header .headertext {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.gold-button {
+    background: #ffc439;
+}
 .noselect {
     cursor: default;
     -webkit-touch-callout: none;
@@ -195,13 +204,8 @@ header .headertext {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-.products_box .payboton {
-    margin-top: 15px;
-}
-.products_cart {
-    height: 40px;
-    width: 50px;
-    align-items: right;
+.payment_content .listbox {
+    padding: 5px;
 }
 .footerflow {
     color: rgb(255, 255, 255);
